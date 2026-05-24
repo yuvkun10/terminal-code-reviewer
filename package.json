@@ -21,10 +21,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19"
   },
   "keywords": [
     "code-review",
@@ -35,15 +36,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "openai": "^6.9.1"
+    "dotenv": "^17.4.2",
+    "openai": "^6.39.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
-    "eslint": "^9.39.1",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vitest": "^4.0.13"
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
+    "vitest": "^4.1.7"
   }
 }
