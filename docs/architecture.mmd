@@ -1,0 +1,12 @@
+flowchart LR
+    A["Git working tree or index"] --> B["git diff --unified=80"]
+    B --> C["Unified diff parser"]
+    B --> D["Secret redaction"]
+    C --> E["Added files and line numbers"]
+    E --> F["Local heuristic reviewer"]
+    D --> G{"OPENAI_API_KEY set?"}
+    G -- "yes" --> H["OpenAI Responses API review"]
+    G -- "no" --> F
+    H --> I["Normalize and sort findings"]
+    F --> I
+    I --> J["Text or JSON output"]

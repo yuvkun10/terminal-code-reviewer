@@ -29,6 +29,8 @@ flowchart LR
     I --> J["Text or JSON output"]
 ```
 
+Diagram source: [docs/architecture.mmd](docs/architecture.mmd).
+
 The CLI builds a `git diff` command from the selected scope. By default it reviews the working tree; `--staged` switches to `git diff --cached`, `--base <ref>` compares against a base ref, and repeated `--path <path>` values add path filters after `--`.
 
 The parser reads unified diff hunks, keeps only added lines, and records each finding against the new version of the file. The redactor runs before model review and replaces common environment assignments, bearer tokens, OpenAI-style keys, code-level `password`/`token`/`secret` assignments, and long token-like strings.
